@@ -1,0 +1,25 @@
+﻿@model MovieCustomerMVCWithAuthentication.Models.Movie
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+<table class="table table-bordered table-striped">
+    <thread>
+        <tr>
+            <th>Movie Name</th>
+            <th>Movie Genre</th>
+            <th>Released In</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Genre</td>
+            <td>@Model.Year</td>
+
+        </tr>
+
+    </tbody>
+</table>
+@Html.ActionLink("Back", "GetMovies", "Movie", null, new { @class = "btn btn-info" })

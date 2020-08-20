@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MovieCustomerMVCWithAuthentication.Models.Movie>
+@{
+    ViewBag.Title = "GetMovies";
+}
+
+<h2>GetMovies</h2>
+<table class="table table-bordered table-striped">
+    <thread>
+        <tr>
+            <th>Movie Id</th>
+            <th>Movie Name</th>
+            <th>Movie Genre</th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach(var mov in Model)
+        {
+            <tr>
+                <td>@mov.Id</td>
+                <td>@Html.ActionLink(mov.Name,"Display","Movie",new { id = mov.Id },null)</td>
+                <td>@mov.Genre</td>
+            </tr>
+        }
+    </tbody>
+</table>
